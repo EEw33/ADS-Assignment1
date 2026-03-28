@@ -5,7 +5,13 @@ public class Main {
     public static void main(String[] args) {
         int n = scanner.nextInt();
         System.out.println("task 1: " + sumOfSquares(n));
-        System.out.println("task 2: " + sumOfFirst(n));
+
+
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++){
+            arr[i] = i+1;
+        }
+        System.out.println("task 2: " + sumOfFirst(arr, n));
 
         System.out.println("For task 3, please, input two values:");
         int b = scanner.nextInt();
@@ -26,9 +32,9 @@ public class Main {
 
 
     //task2
-    public static int sumOfFirst(int n){
+    public static int sumOfFirst(int[] array, int n){
         if(n==1) return 1;
-        return n+sumOfFirst(n-1);
+        return array[n-1]+sumOfFirst(array,n-1);
     }
 
 
