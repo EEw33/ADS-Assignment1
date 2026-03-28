@@ -4,18 +4,17 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         int n = scanner.nextInt();
-        System.out.println("task 1:" + sumOfSquares(n));
-        System.out.println("task 2:" + sumOfFirst(n));
+        System.out.println("task 1: " + sumOfSquares(n));
+        System.out.println("task 2: " + sumOfFirst(n));
 
         System.out.println("For task 3, please, input two values:");
         int b = scanner.nextInt();
         n = scanner.nextInt();
-        System.out.println("task 3:" + sumOfPowers(b,n));
+        System.out.println("task 3: " + sumOfPowers(b,n));
 
         System.out.println("Task 4 input:");
         n = scanner.nextInt();
         reverse(n);
-
     }
 
 
