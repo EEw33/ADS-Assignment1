@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         System.out.println("task 1:" + sumOfSquares(n));
         System.out.println("task 2:" + sumOfFirst(n));
@@ -11,6 +11,11 @@ public class Main {
         int b = scanner.nextInt();
         n = scanner.nextInt();
         System.out.println("task 3:" + sumOfPowers(b,n));
+
+        System.out.println("Task 4 input:");
+        n = scanner.nextInt();
+        reverse(n);
+
     }
 
 
@@ -36,5 +41,14 @@ public class Main {
     private static int pow(int a, int b) {
         if (b == 0) return 1;
         return a * pow(a, b - 1);
+    }
+
+
+    //task4
+    public static void reverse(int n){
+        if(n==0) return;
+        int container = scanner.nextInt();
+        reverse(n-1);
+        System.out.print(container+" ");
     }
 }
